@@ -1,0 +1,11 @@
+<%= link_to "Add a Cocktail", new_cocktail_path(@cocktail) %>
+
+<h1 class="col-md-auto">ALL COCKTAILS</h1>
+<ul class="d-flex align-content-start flex-wrap">
+  <% @cocktails.each do |cocktail| %>
+    <div class="card cards-image" style="width: 18rem;">
+      <h5 class="card-title"><%= cocktail.name %></h5>
+      <%= link_to "The recipe", cocktail_path(cocktail), class: "btn btn-outline-dark" %>
+    </div>
+  <% end %>
+</ul>
